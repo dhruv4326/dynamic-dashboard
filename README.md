@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Dynamic Dashboard Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully functional dynamic dashboard application built with React and Tailwind CSS for the Frontend Trainee Assignment of AccuKnox.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### Core Functionality
+- **Dynamic Widget Management**: Add, remove, and manage widgets dynamically
+- **Category-based Organization**: Widgets organized into categories (CSPM, CWPP, Registry Scan)
+- **JSON-driven Structure**: Dashboard configuration stored in JSON format
+- **Search Functionality**: Search through all widgets by name, content, or category
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **State Management**: Efficient state management using React useReducer
 
-### `npm start`
+### User Interface
+- **Modern Design**: Clean, professional UI with hover effects and animations
+- **Modal Interfaces**: User-friendly modals for adding and managing widgets
+- **Real-time Updates**: Instant feedback and updates when modifying widgets
+- **Accessibility**: Keyboard navigation and screen reader support
+- **Form Validation**: Input validation with helpful error messages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technical Features
+- **React 18**: Built with latest React features and hooks
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **Lucide React**: Modern icon library for UI elements
+- **recharts**: for responsive and customizable charts.
+- **Local State Management**: No external dependencies for state management
+- **Component Architecture**: Well-structured, reusable components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+dynamic-dashboard-app/
+├── public/
+│   ├── index.html
+│   └── icons8-dashboard-50.png
+├── src/
+│   ├── App.js              # Main dashboard component
+│   ├── index.js            # React entry point
+│   └── index.css           # Tailwind CSS and custom styles
+├── package.json            # Dependencies and scripts
+├── tailwind.config.js      # Tailwind configuration
+├── postcss.config.js       # PostCSS configuration
+└── README.md               # This file
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Installation & Setup
 
-### `npm run build`
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step-by-Step Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Create a new React application:**
+   ```bash
+   npx create-react-app dynamic-dashboard-app
+   cd dynamic-dashboard-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install required dependencies:**
+   ```bash
+npm install lucide-react recharts
+   ```
 
-### `npm run eject`
+3. **Install Tailwind CSS:**
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   npx tailwindcss init -p
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. **Open your browser:**
+   Navigate to `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎯 Assignment Requirements Fulfilled
 
-## Learn More
+### ✅ Core Requirements
+1. **JSON-based Dashboard Structure**: Dashboard configuration stored in structured JSON format with categories and widgets
+2. **Dynamic Widget Addition**: Users can add new widgets with custom names and content
+3. **Dynamic Widget Removal**: Cross icon on each widget for removal, plus bulk management option
+4. **Category Organization**: Widgets properly organized into categories (CSPM Executive Dashboard, CWPP Dashboard, Registry Scan)
+5. **Random Text Content**: Sample widgets contain placeholder text content
+6. **Widget Search**: Comprehensive search functionality across all widgets
+7. **Technology Stack**: Built with React and modern development practices
+8. **State Management**: Local state management using React's useReducer hook
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ✅ Additional Features
+- **Form Validation**: Input validation with error messages
+- **Responsive Design**: Mobile-friendly interface
+- **Loading States**: Visual feedback during operations
+- **Confirmation Dialogs**: User confirmation for destructive actions
+- **Dashboard Statistics**: Real-time widget and category counts
+- **Reset Functionality**: Option to reset dashboard to default state
+- **Accessibility**: Keyboard navigation and ARIA labels
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📊Chart Types Available:
 
-### Code Splitting
+Donut Charts - For Cloud Accounts, Risk Assessment, Image Security data
+Bar Charts - For Namespace-specific alerts
+Line Charts - For Workload alerts over time
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎮 Usage Guide
 
-### Analyzing the Bundle Size
+### Adding a New Widget
+1. Click the "Add Widget" button in any category section
+2. Fill in the widget name and content in the modal
+3. Click "Add Widget" to create the new widget
+4. The widget appears immediately in the selected category
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Removing Widgets
+**Method 1 - Individual Removal:**
+1. Hover over any widget
+2. Click the X icon that appears in the top-right corner
+3. Confirm the deletion in the popup dialog
 
-### Making a Progressive Web App
+**Method 2 - Bulk Management:**
+1. Click "Manage Widgets" in the header
+2. Uncheck widgets you want to remove
+3. Close the management modal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Searching Widgets
+1. Click "Manage Widgets" in the header
+2. Use the search bar to find widgets by name, content, or category
+3. Filter by specific categories using the dropdown
+4. Clear filters using the refresh button
 
-### Advanced Configuration
+### Dashboard Reset
+1. Click the "Reset" button in the header
+2. Confirm the action to restore default widgets
+3. All custom widgets will be removed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
