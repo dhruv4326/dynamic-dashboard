@@ -60,7 +60,7 @@ dynamic-dashboard-app/
 
 2. **Install required dependencies:**
    ```bash
-npm install lucide-react recharts
+   npm install lucide-react recharts
    ```
 
 3. **Install Tailwind CSS:**
